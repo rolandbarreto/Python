@@ -1,3 +1,14 @@
+def conversor(divisa, valor_dolar):
+    moneda = input('Cuantos ' + divisa + ' tienes? ')
+    moneda = float(moneda)
+    dolares = moneda / valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+
+    print('-------------------------------')
+    print('Tienes $' + dolares + ' dólares')
+    print('-------------------------------\n')
+
 menu = """
 Bienvenidos al conversor de monedas 💵
 
@@ -11,49 +22,13 @@ Elige una opcion: """
 opcion = int(input(menu))
 
 if opcion == 1:
-    pesos = input('Cuantos pesos colombianos tienes? ')
-    pesos = float(pesos)
-    valor_dolar = 3875
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-
-    print('-------------------------------')
-    print('Tienes $' + dolares + ' dólares')
-    print('-------------------------------\n')
+    conversor('pesos colombianos', 3875)
 elif opcion == 2:
-    pesos = input('Cuantos pesos argentinos tienes? ')
-    pesos = float(pesos)
-    valor_dolar = 65
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-
-    print('-------------------------------')
-    print('Tienes $' + dolares + ' dólares')
-    print('-------------------------------\n')
+    conversor('pesos argentinos', 65)
 elif opcion == 3:
-    pesos = input('Cuantos pesos mexicanos tienes? ')
-    pesos = float(pesos)
-    valor_dolar = 24
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-
-    print('-------------------------------')
-    print('Tienes $' + dolares + ' dólares')
-    print('-------------------------------\n')
+    conversor('pesos mexicanos', 24)
 elif opcion == 4:
-    cordobas = input('Cuantos cordobas tienes? ')
-    cordobas = float(cordobas)
-    valor_dolar = 36.10
-    dolares = cordobas / valor_dolar
-    dolares = round(dolares, 2)
-    dolares = str(dolares)
-
-    print('-------------------------------')
-    print('Tienes $' + dolares + ' dólares')
-    print('-------------------------------')
+    conversor('cordobas nicaraguenses', 36.10)
 else:
     print('Ingresa una opcion correcta!')
 
